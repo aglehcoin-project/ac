@@ -13,12 +13,10 @@ sudo apt-get install libzmq3-dev -y
 sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler -y
 sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler -y
 sudo apt-get install libssl1.0-dev -y
-git clone  https://github.com/aglecoin-project/aglehcoin.git
-cd aglehcoin
 cd str
 make -f makefile.unix
 cd ..
-qmake --sk
+qmake 
 make
 
 #etc.
