@@ -1,47 +1,85 @@
-Aglehcoin 0.8.x BETA
-====================
-
-Copyright (c) 2009-2014 Bitcoin Developers
-Copyright (c) 2011-2014 Aglehcoin Developers
-
-Distributed under the MIT/X11 software license, see the accompanying
-file COPYING or http://www.opensource.org/licenses/mit-license.php.
-This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](http://www.openssl.org/). This product includes
-cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
-
-
-Intro
----------------------
-Aglehcoin is a free open source peer-to-peer electronic cash system that is
-completely decentralized, without the need for a central server or trusted
-parties.  Users hold the crypto keys to their own money and transact directly
-with each other, with the help of a P2P network to check for double-spending.
-
+Aglehcoin Core
+=============
 
 Setup
 ---------------------
-You need the Qt4 run-time libraries to run Aglehcoin-Qt. On Debian or Ubuntu:
-	`sudo apt-get install libqtgui4`
+Aglehcoin Core is the original Aglehcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Aglehcoin transactions, which requires approximately 22 gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+
+To download Aglehcoin Core, visit [aglehcoin.org](https://aglehcoin.org/).
+
+Running
+---------------------
+The following are some helpful notes on how to run Aglehcoin Core on your native platform.
+
+### Unix
 
 Unpack the files into a directory and run:
 
-- bin/32/aglehcoin-qt (GUI, 32-bit)
-- bin/32/aglehcoind (headless, 32-bit)
-- bin/64/aglehcoin-qt (GUI, 64-bit)
-- bin/64/aglehcoind (headless, 64-bit)
+- `bin/aglehcoin-qt` (GUI) or
+- `bin/aglehcoind` (headless)
 
-See the documentation at the [Aglehcoin Wiki](http://aglehcoin.info)
+### Windows
+
+Unpack the files into a directory, and then run aglehcoin-qt.exe.
+
+### macOS
+
+Drag Aglehcoin Core to your applications folder, and then run Aglehcoin Core.
+
+### Need Help?
+
+* See the documentation at the [Aglehcoin Wiki](https://aglehcoin.info/)
 for help and more information.
+* Ask for help on [#aglehcoin](http://webchat.freenode.net?channels=aglehcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=aglehcoin).
+* Ask for help on the [AglehcoinTalk](https://aglehcointalk.io/) forums, in the [Technical Support section](https://aglehcointalk.io/c/technical-support).
 
-
-Other Pages
+Building
 ---------------------
+The following are developer notes on how to build Aglehcoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+
+- [Dependencies](dependencies.md)
+- [macOS Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
-- [OSX Build Notes](build-osx.md)
-- [Windows Build Notes](build-msw.md)
-- [Coding Guidelines](coding.md)
-- [Release Process](release-process.md)
+- [Windows Build Notes](build-windows.md)
+- [FreeBSD Build Notes](build-freebsd.md)
+- [OpenBSD Build Notes](build-openbsd.md)
+- [NetBSD Build Notes](build-netbsd.md)
+- [Gitian Building Guide (External Link)](https://github.com/bitcoin-core/docs/blob/master/gitian-building.md)
+
+Development
+---------------------
+The Aglehcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+
+- [Developer Notes](developer-notes.md)
+- [Productivity Notes](productivity.md)
 - [Release Notes](release-notes.md)
-- [Multiwallet Qt Development](multiwallet-qt.md)
-- [Unit Tests](unit-tests.md)
+- [Release Process](release-process.md)
 - [Translation Process](translation_process.md)
+- [Translation Strings Policy](translation_strings_policy.md)
+- [JSON-RPC Interface](JSON-RPC-interface.md)
+- [Unauthenticated REST Interface](REST-interface.md)
+- [Shared Libraries](shared-libraries.md)
+- [BIPS](bips.md)
+- [Dnsseed Policy](dnsseed-policy.md)
+- [Benchmarking](benchmarking.md)
+
+### Resources
+* Discuss on the [AglehcoinTalk](https://aglehcointalk.io/) forums.
+* Discuss general Aglehcoin development on #aglehcoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=aglehcoin-dev.
+
+### Miscellaneous
+- [Assets Attribution](assets-attribution.md)
+- [bitcoin.conf Configuration File](bitcoin-conf.md)
+- [Files](files.md)
+- [Fuzz-testing](fuzzing.md)
+- [Reduce Traffic](reduce-traffic.md)
+- [Tor Support](tor.md)
+- [Init Scripts (systemd/upstart/openrc)](init.md)
+- [ZMQ](zmq.md)
+- [PSBT support](psbt.md)
+
+License
+---------------------
+Distributed under the [MIT software license](/COPYING).
+This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](https://www.openssl.org/). This product includes
+cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.

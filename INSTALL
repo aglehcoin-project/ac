@@ -1,9 +1,0 @@
-Building Aglehcoin
-
-See doc/readme-qt.rst for instructions on building Aglehcoin-Qt,
-the intended-for-end-users, nice-graphical-interface, reference
-implementation of Aglehcoin.
-
-See doc/build-*.txt for instructions on building aglehcoind,
-the intended-for-services, no-graphical-interface, reference
-implementation of Aglehcoin.
