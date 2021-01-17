@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x");
+uint256 hashGenesisBlock("0xf51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Aglehcoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2746,7 +2746,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xc8;
         pchMessageStart[2] = 0xb0;
         pchMessageStart[3] = 0xdl;
-        hashGenesisBlock = uint256("0x");
+        hashGenesisBlock = uint256("0xf51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3");
     }
 
     //
@@ -2793,7 +2793,7 @@ bool InitBlockIndex() {
         block.nVersion = 1;
         block.nTime    = 1610862894;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 2084524493;
+        block.nNonce   = 2084600210;
 
         if (fTestNet)
         {
@@ -2801,7 +2801,7 @@ bool InitBlockIndex() {
             block.nNonce   = 385270584;
         }
         /////////////ARMEN MERIKYAN
-        if (true && block.GetHash() != hashGenesisBlock)
+        if (false && block.GetHash() != hashGenesisBlock)
                 {
                     printf("Searching for genesis block...\n");
                     // This will figure out a valid hash and Nonce if you're
