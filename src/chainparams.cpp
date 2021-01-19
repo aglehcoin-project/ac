@@ -94,7 +94,7 @@ public:
         // The best chain should have at least this much work.
 
         consensus.nMinimumChainWork = uint256S("0x00");
-        consensus.defaultAssumeValid = uint256S("0xf51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3"); // 0
+        consensus.defaultAssumeValid = uint256S("f51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3"); // 0
 
         // By default assume that the signatures in ancestors of this block are valid.
         //consensus.defaultAssumeValid = uint256S("0");
@@ -119,8 +119,8 @@ public:
 
         genesis = CreateGenesisBlock(1610862894, 2084600210, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0xf51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc664c7bb2a62ff409c6f47919cec4d813d354481263416290ae7bc4fc3c09a57"));
+        assert(consensus.hashGenesisBlock == uint256S("f51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3"));
+        assert(genesis.hashMerkleRoot == uint256S("c664c7bb2a62ff409c6f47919cec4d813d354481263416290ae7bc4fc3c09a57"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
