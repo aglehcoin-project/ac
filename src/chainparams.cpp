@@ -117,7 +117,7 @@ public:
         m_assumed_chain_state_size = 1;
 
         //genesis = CreateGenesisBlock(1610862894, 2084600210, 0x1e0ffff0, 1, 50 * COIN);
-        //consensus.hashGenesisBlock = genesis.GetHash();
+        consensus.hashGenesisBlock = uint256S("0xf51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3");
 
         //printf("block.GetHash = %s\n", consensus.hashGenesisBlock.ToString().c_str());
         //assert(consensus.hashGenesisBlock == uint256S("0xf51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3"));
