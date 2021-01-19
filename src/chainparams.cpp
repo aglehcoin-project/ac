@@ -67,7 +67,7 @@ public:
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 0; // 87afb798a3ad9378fcd56123c81fb31cfd9a8df4719b9774d71730c16315a092 - October 1, 2012
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("");
+        consensus.BIP34Hash = uint256S("f51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3");
         consensus.BIP65Height = 0; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
         consensus.BIP66Height = 0; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -93,10 +93,10 @@ public:
 
         // The best chain should have at least this much work.
 
-        consensus.nMinimumChainWork = uint256S("0x0");
+        consensus.nMinimumChainWork = uint256S("0");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x0");
+        //consensus.defaultAssumeValid = uint256S("0");
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
@@ -116,8 +116,8 @@ public:
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1610862894, 0, 0x1e0ffff0, 1, 50 * COIN);
-        consensus.hashGenesisBlock = genesis.GetHash();
+        //genesis = CreateGenesisBlock(1610862894, 0, 0x1e0ffff0, 1, 50 * COIN);
+        //consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("f51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3"));
         assert(genesis.hashMerkleRoot == uint256S("c664c7bb2a62ff409c6f47919cec4d813d354481263416290ae7bc4fc3c09a57"));
 
