@@ -62,7 +62,6 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 class CMainParams : public CChainParams {
 public:
     CMainParams() {
-        vSeeds.emplace_back("dnsseed.aglehcoin.org");
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 0; // 87afb798a3ad9378fcd56123c81fb31cfd9a8df4719b9774d71730c16315a092 - October 1, 2012
@@ -117,12 +116,12 @@ public:
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1610862894, 2084600210, 0x1e0ffff0, 1, 50 * COIN);
-        consensus.hashGenesisBlock = genesis.GetHash();
+        //genesis = CreateGenesisBlock(1610862894, 2084600210, 0x1e0ffff0, 1, 50 * COIN);
+        //consensus.hashGenesisBlock = genesis.GetHash();
 
-        printf("block.GetHash = %s\n", consensus.hashGenesisBlock.ToString().c_str());
-        assert(consensus.hashGenesisBlock == uint256S("0xf51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc664c7bb2a62ff409c6f47919cec4d813d354481263416290ae7bc4fc3c09a57"));
+        //printf("block.GetHash = %s\n", consensus.hashGenesisBlock.ToString().c_str());
+        //assert(consensus.hashGenesisBlock == uint256S("0xf51a7ffd799765e03576d6f49750a5e51719d262e2f27451624ccb24d31344f3"));
+        //assert(genesis.hashMerkleRoot == uint256S("0xc664c7bb2a62ff409c6f47919cec4d813d354481263416290ae7bc4fc3c09a57"));
 
         vSeeds.emplace_back("dnsseed.aglehcoin.org");
         // Note that of those which support the service bits prefix, most only support a subset of
